@@ -16,7 +16,7 @@
           v-for="(item, index) in items"
           :key="index"
         >
-          <v-list-item-title>{{ item.title }}</v-list-item-title>
+          <v-list-item-title>{{ item }}</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-menu>
@@ -27,8 +27,16 @@
 export default {
   name: 'ItemDropdown',
   props: {
-    'title': String,
-    'items': Array
+    title: {
+      type: String,
+      default: ''
+    },
+    items: {
+      type: Array,
+      default () {
+        return []
+      }
+    }
   }
 }
 </script>

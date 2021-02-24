@@ -14,17 +14,17 @@
               >
             </a>
           </div>
-            <ul id="links">
-              <router-link
-                v-for="routes in links"
-                :key="routes.id"
-                :to="`${routes.page}`"
-                class="spacing"
-              >
-                {{ routes.text }}
-              </router-link>
-            </ul>
-          <div class="right"/>
+          <ul id="links">
+            <router-link
+              v-for="routes in links"
+              :key="routes.id"
+              :to="`${routes.page}`"
+              class="spacing"
+            >
+              {{ routes.text }}
+            </router-link>
+          </ul>
+          <div class="right" />
         </div>
       </header>
     </v-app>
