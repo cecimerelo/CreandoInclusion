@@ -148,4 +148,8 @@ link-logo {
   Padding: 20px 10px 10px;
 }
 
+#app {
+  background-color:#ffffff;
+}
+
 </style>
