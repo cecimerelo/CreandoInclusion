@@ -14,16 +14,25 @@
               >
             </a>
           </div>
-          <ul id="links">
-            <router-link
-              v-for="routes in links"
-              :key="routes.id"
-              :to="`${routes.page}`"
-              class="spacing"
-            >
-              {{ routes.text }}
-            </router-link>
-          </ul>
+          <div>
+            <v-row id="links" justify="space-around">
+              <v-btn
+                v-for="routes in links"
+                :key="routes.id"
+                :to="`${routes.page}`"
+                color="black"
+                depressed
+                text
+                small
+                plain
+                class="spacing"
+                v-bind="attrs"
+                v-on="on"
+              >
+                {{ routes.text }}
+              </v-btn>
+            </v-row>
+          </div>
           <div class="right" />
         </div>
       </header>
@@ -88,7 +97,6 @@ export default {
 
 .spacing {
   margin-right: 20px;
-  text-decoration: none;
   padding: 0 10px;
 }
 
@@ -124,7 +132,7 @@ link-logo {
 }
 
 #links {
-  padding: 20px 20px 20px;
+  padding: 70px 20px 30px;
 }
 
 #link-logo a {
