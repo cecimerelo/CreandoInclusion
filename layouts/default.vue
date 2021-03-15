@@ -15,22 +15,13 @@
             </a>
           </div>
           <div>
-            <v-row id="links" justify="space-around">
-              <v-btn
+            <v-row justify="space-around">
+              <MenuComponent
                 v-for="routes in links"
                 :key="routes.id"
                 :to="`${routes.page}`"
-                color="black"
-                depressed
-                text
-                small
-                plain
-                class="spacing"
-                v-bind="attrs"
-                v-on="on"
-              >
-                {{ routes.text }}
-              </v-btn>
+                :text="routes.text"
+              />
             </v-row>
           </div>
           <div class="right" />
@@ -49,39 +40,46 @@ export default {
         {
           id: 1,
           text: 'Inicio',
-          page: '/Inicio'
+          page: '/Inicio',
+          simple: true
 
         },
         {
           id: 2,
           text: 'Quienes Somos',
-          page: '/QuienesSomos'
+          page: '/QuienesSomos',
+          simple: true
         },
         {
           id: 3,
           text: 'Servicios',
           page: '/Servicios',
+          simple: false,
           dropdown: ['Club de Ocio', 'Programas', 'Inserción Laboral', 'Servicio Fisioterapia', 'Servicios Sociosanitarios']
         },
         {
           id: 4,
           text: 'Colabora',
-          page: '/Colabora'
+          page: '/Colabora',
+          simple: true
         },
         {
           id: 5,
           text: 'Voluntariado',
-          page: '/Voluntariado'
+          page: '/Voluntariado',
+          simple: true
         },
         {
           id: 6,
           text: 'Galería',
-          page: '/Galeria'
+          page: '/Galeria',
+          simple: true
         },
         {
           id: 7,
           text: 'Contacto',
-          page: '/Contacto'
+          page: '/Contacto',
+          simple: true
         }
       ]
     }
@@ -94,11 +92,6 @@ export default {
 </script>
 
 <style>
-
-.spacing {
-  margin-right: 20px;
-  padding: 0 10px;
-}
 
 link-logo {
   display: flex;
@@ -131,13 +124,8 @@ link-logo {
   margin: 50px;
 }
 
-#links {
-  padding: 70px 20px 30px;
-}
-
 #link-logo a {
   color: #5d5d5d;
-  font-size: x-large;
 }
 
 #link-logo a:hover {
