@@ -14,13 +14,12 @@
               >
             </a>
           </div>
-          <div>
-            <v-row justify="space-around">
+          <div class="menu">
+            <v-row>
               <MenuComponent
-                v-for="routes in links"
-                :key="routes.id"
-                :to="`${routes.page}`"
-                :text="routes.text"
+                v-for="link in links"
+                :key="link.id"
+                :link="link"
               />
             </v-row>
           </div>
@@ -42,7 +41,6 @@ export default {
           text: 'Inicio',
           page: '/Inicio',
           simple: true
-
         },
         {
           id: 2,
@@ -55,7 +53,7 @@ export default {
           text: 'Servicios',
           page: '/Servicios',
           simple: false,
-          dropdown: ['Club de Ocio', 'Programas', 'Inserción Laboral', 'Servicio Fisioterapia', 'Servicios Sociosanitarios']
+          dropdownItems: ['Servicios', 'Club de Ocio', 'Programas', 'Inserción Laboral', 'Servicio Fisioterapia', 'Servicios Sociosanitarios']
         },
         {
           id: 4,
@@ -138,6 +136,10 @@ link-logo {
 
 #app {
   background-color:#ffffff;
+}
+
+.menu {
+  font-size: 0;
 }
 
 </style>
