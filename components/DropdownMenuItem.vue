@@ -1,6 +1,8 @@
 <template>
   <div id="menu-item" class="links">
-    <v-menu>
+    <v-menu
+      nudge-left="30"
+    >
       <template #activator="{ attrs, on }">
         <v-btn
           color="black"
@@ -27,12 +29,15 @@
           plain
           link
         >
-          <v-list-item-title> {{ item }} </v-list-item-title>
+          <div class="dropdown-elements">
+            <v-list-item-title> {{ item }} </v-list-item-title>
+          </div>
         </v-list-item>
       </v-list>
     </v-menu>
   </div>
 </template>
+
 <script>
 export default {
   name: 'DropdownMenuItem',
@@ -65,6 +70,8 @@ export default {
 .v-list-item {
   font-family: "Roboto", sans-serif;
   line-height: 1.5;
+  text-align: center;
+  position: relative;
 }
 
 .links {
@@ -75,4 +82,5 @@ export default {
   margin-right: 20px;
   padding: 0 10px;
 }
+
 </style>
