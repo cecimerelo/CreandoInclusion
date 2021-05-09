@@ -26,6 +26,9 @@
           <div class="right" />
         </div>
       </header>
+      <body>
+        <BottomPage />
+      </body>
     </v-app>
   </div>
 </template>
@@ -119,7 +122,7 @@ link-logo {
 }
 
 .right {
-  margin: 50px;
+  margin: 30px;
 }
 
 #link-logo a {

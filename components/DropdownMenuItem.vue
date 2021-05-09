@@ -75,11 +75,11 @@ export default {
 }
 
 .links {
-  padding: 80px 20px 30px;
+  padding: 80px 10px 30px;
 }
 
 .spacing {
-  margin-right: 20px;
+  margin-right: 10px;
   padding: 0 10px;
 }
 

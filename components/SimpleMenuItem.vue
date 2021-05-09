@@ -37,12 +37,12 @@ export default {
 }
 
 .links {
-  padding: 80px 20px 20px;
+  padding: 80px 10px 30px;
 }
 
 .spacing {
-  margin-right: 20px;
-  padding: 0 10px;
+  margin-right: 10px;
+  padding: 0 15px;
 }
 
 </style>
